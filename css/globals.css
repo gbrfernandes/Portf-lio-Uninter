@@ -1,0 +1,186 @@
+/* Variáveis de Tema */
+:root {
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+  --bg-color: #0b0b0b;
+  --text-primary: var(--neutral-50);
+  --text-secondary: var(--neutral-400);
+  --text-blue: #146ef5;
+}
+
+/* Font-Face: Importação de fonte personalizada */
+@font-face {
+  font-family: 'Geist';
+  src: url(../fonts/GeistVF.woff2) format('woff2'),
+    url(../fonts/GeistVF.woff) format('woff');
+}
+
+/* Reset Básico e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Geist', sans-serif;
+  text-wrap: balance;
+}
+
+/* Estilos Globais para HTML e Body */
+html,
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-weight: 400;
+  scroll-behavior: smooth;
+  line-height: 150%;
+  contain: paint;
+}
+
+/* Classe utilitária para altura completa da viewport */
+.h-full {
+  height: 100vh;
+}
+
+/* Componentes Reutilizáveis */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Divider: Linha divisória reutilizável */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--neutral-800);
+}
+
+/* Classes Utilitárias para Alinhamento */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 980px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .inner-wrapper {
+    padding: 0 20px;
+  }
+}
+
+/* Estilo de marcação para textos com a cor primária */
+mark.--text-primary {
+  color: var(--text-primary);
+  background-color: transparent;
+}
+
+/* Header: Cabeçalho da página */
+header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--neutral-800);
+  z-index: 10;
+}
+
+.header-content {
+  padding: 20px 0;
+  background-color: var(--bg-color);
+}
+
+/* Navegação dentro do Header */
+.header-content nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.header-content nav ul li a {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 547px) {
+  .header-content {
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    gap: 8px;
+  }
+
+  .header-content nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Efeito Hover e estado ativo nos links do Header */
+.header-content nav ul li a:hover {
+  color: var(--text-primary);
+}
+
+.header-content nav ul li a.active {
+  color: var(--text-primary);
+}
+
+/* Footer: Rodapé da página */
+footer {
+  border-top: 1px solid var(--neutral-800);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Conteúdo do Footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: none;
+  }
+}

@@ -1,0 +1,392 @@
+/* Hero Section: Estilos para a seção principal da página */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 180px 0;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  background-color: #e5e5e5;
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #0061a7 0%,
+    rgba(0, 97, 167, 0) 100%
+  );
+  opacity: 0.15;
+  transform: rotate(44.097deg);
+}
+
+.hero-content h1 {
+  font-size: 68px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  max-width: 750px;
+  z-index: 2;
+  line-height: 125%;
+}
+
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+.hero-content span {
+  font-size: 16px;
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 322px;
+  z-index: 2;
+}
+
+/* Content Section: Estilos gerais para conteúdo textual */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding-top: 60px;
+}
+
+.content h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* Button Styles: Estilos para botões */
+a:has(button.btn) {
+  z-index: 3;
+}
+
+button.btn {
+  background-color: var(--neutral-50);
+  color: var(--neutral-950);
+  border: none;
+  border-radius: 100px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+  z-index: 3;
+}
+
+button.btn:hover {
+  background-color: var(--neutral-300);
+}
+
+/* Form Styles: Estilos para formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--bg-color);
+  border: 1px solid var(--neutral-800);
+  padding: 2em;
+  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  border: 1px solid var(--neutral-800);
+  border-radius: 4px;
+  padding: 0.5em;
+  background-color: var(--neutral-900);
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--text-primary);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+button {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.75em;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--neutral-400);
+}
+
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+textarea::placeholder {
+  color: var(--neutral-600);
+  font-size: 14px;
+}
+
+/* Contact and About Sections: Estilos para as seções de Contato e Sobre */
+.contact-content,
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.contact-text,
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-text a {
+  width: fit-content;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
+
+.about-content img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  border: 2px solid var(--neutral-50);
+  border-radius: 100px;
+}
+
+/* Experiences Section: Estilos para a seção de Experiências */
+.experiences-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.experiences-content h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.experiences-content ul li {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.experiences-content ul {
+  padding-left: 24px;
+}
+
+/* Portfolio Section: Estilos para a seção de Portfólio */
+.portfolio-content .portfolio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  position: relative;
+}
+
+.portfolio-content {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-content img {
+  max-width: 980px;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid var(--neutral-500);
+}
+
+/* Title Wrapper: Estilos para a caixa de título e subtítulo */
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-wrapper h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.title-wrapper span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.title-wrapper span a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-blue);
+}
+
+/* Selector Styles: Estilos para o seletor customizado */
+.selector {
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+
+.selector .custom-button {
+  transition: 0.5s;
+  background: transparent !important;
+  position: relative;
+  padding: 16px 20px;
+  border: none;
+  font-size: 16;
+  color: #fff;
+  text-align: center;
+}
+
+.selector .custom-button-text,
+.selector .custom-button-icon {
+  position: relative;
+  z-index: 3;
+}
+
+.selector .custom-button::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff20;
+  z-index: 1;
+  transition: opacity 0.3s linear;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.selector .custom-button::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  z-index: 3;
+  transition: opacity 0.2s linear;
+  opacity: 1;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.selector .custom-button:hover::before {
+  background: #222530;
+}
+
+.selector::before {
+  position: absolute;
+  content: '';
+  top: -40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 2;
+  transition: opacity 0.2s linear;
+  opacity: 1;
+  width: 20px;
+  height: 100px;
+  filter: blur(15px);
+  border-radius: 4px;
+  animation: rodar 5s infinite linear;
+  transform-origin: center bottom;
+}
+
+@keyframes rodar {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Portfolio Wrapper with Fade Effect: Estilos para adicionar um efeito de fade */
+.portfolio-wrapper.fade::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: -20px;
+  background: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Divider in Portfolio Section: Estilos para o divisor da seção de Portfólio */
+.portfolio-content .divider {
+  margin-top: 20px;
+}
